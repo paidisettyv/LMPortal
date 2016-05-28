@@ -1,0 +1,7 @@
+{
+	"name": "lm.portal",
+	"private": true,
+  "dependencies": {
+    "ng-password-strength": "0.3.0"
+  }
+}

@@ -1,0 +1,16 @@
+﻿<div class="col-md-8">
+    <h3>Associate your {{externalAuthData.Provider}} Account</h3>
+    <hr />
+    <p class="text-success">You have successfully autheticated with <strong>{{externalAuthData.Provider}}</strong>. Please enter a user name below for this site and click the Register button to log in.</p>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" [(ngModel)]="externalAuthData.UserName" required autofocus>
+                <button class="btn btn-sm btn-info btn-block" type="button" style="margin-top:10px;" (click)="registerExternal()">Register</button>
+            </div>
+            <div *ngIf="message" [ngClass]="(hasSavedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+                {{message}}
+            </div>
+        </div>
+    </div>
+</div>

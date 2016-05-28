@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <script>
+            document.write('<base href="' + document.location.origin + '" />');
+        </script>
+
+        <title>Lending-Metrics Dash Mockup</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-signin-client_id" content="AIzaSyA8nm7rQLJDz1sUkx6tOSZCS7hU6r3ko7k.apps.googleusercontent.com"> 
+
+        <link href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet" />
+        <link href="node_modules/bootstrap/dist/css/bootstrap-theme.css" type="text/css" rel="stylesheet" />
+        <!--<link rel="stylesheet" href="assets/css/styles-alternative.css" id="theme">-->
+        <link href="assets/css/app.css" type="text/css" rel="stylesheet" />
+      
+        <link href="assets/css/dash.widget.css" type="text/css" rel="stylesheet" />
+        <link href="assets/css/spinner.css" type="text/css" rel="stylesheet" />
+        <link href="assets/css/social-buttons.css" type="text/css" rel="stylesheet" />
+        <link href="assets/css/font-awesome.css" type="text/css" rel="stylesheet" />
+        <link href="assets/css/style.css" typeof="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <bank-vision-app>
+            <!-- Loading Placeholder This will be replaced once JS has initialised-->
+            <div id="load-content-wrapper">
+                <div class="col-lg-4 col-lg-offset-4
+                    col-md-6 col-md-offset-3
+                    col-sm-8 col-sm-offset-2
+                    col-xs-12">
+                    <p class="bg-primary text-center lead">
+                        Loading ...
+                        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+                    </p>
+                </div>
+            </div>
+        </bank-vision-app>
+        
+        <script src="assets/javascript/vendor/chart.js"></script>
+
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.js"></script>
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+        <script src="node_modules/angular2/bundles/http.dev.js"></script>
+        <script src="node_modules/angular2/bundles/router.dev.js"></script>
+        <script src="node_modules/owasp-password-strength-test/owasp-password-strength-test.js"></script>
+        <!-- 2. Configure SystemJS -->
+        <script>
+          System.config({
+            packages: {
+              app: {
+                format: 'register',
+                defaultExtension: 'js'
+              }
+            }
+          });
+
+          System.import('app/boot').then(null, console.error.bind(console));
+        </script>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- Global JS config vars -->
+        <script src="app/app.config.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{5A5FEE6C-24CD-4E7E-A66A-CF158CA86842}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <!-- <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion> -->
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".bowerrc" />
+    <None Include="app\ajax\ajax.auth.options.ts" />
+    <None Include="app\abstract.component.ts" />
+    <None Include="app\app.component.ts" />
+    <None Include="app\app.config.js" />
+    <None Include="app\boot.ts" />
+    <None Include="app\components\bankstats.component.ts" />
+    <None Include="app\components\dash.component.ts" />
+    <None Include="app\components\flagged.searches.component.ts" />
+    <None Include="app\components\reset.password.component.ts" />
+    <None Include="app\components\login.component.ts" />
+    <None Include="app\directives\bootstrap.paging.ts" />
+    <None Include="app\components\associate.account.component.ts" />
+    <None Include="app\components\searches.by.lender.component.ts" />
+    <None Include="app\entities\account.ts" />
+    <None Include="app\entities\bankstat.ts" />
+    <None Include="app\pipes\unicode.date.pipe.ts" />
+    <None Include="app\entities\flagged.search.ts" />
+    <None Include="app\services\authentication.service.ts" />
+    <None Include="app\services\bankstat.service.ts" />
+    <None Include="app\services\window.service.ts" />
+    <None Include="app\services\postmessage.service.ts" />
+    <None Include="app\services\local.storage.service.ts" />
+    <None Include="app\components\completed.searches.component.ts" />
+    <None Include="app\services\completed.searches.service.ts" />
+    <Content Include="app\templates\auth\associate.account.html" />
+    <Content Include="app\templates\dashcomponents\flagged.searches.html" />
+    <Content Include="app\templates\dashcomponents\searches.by.lender.html" />
+    <Content Include="app\templates\dash\admin.html" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\images\backgrounds\company-bkground.gif" />
+    <Content Include="assets\images\logos\beans.png" />
+    <Content Include="assets\javascript\auth.complete.js" />
+    <Content Include="assets\javascript\load.script.js" />
+    <Content Include="assets\javascript\vendor\chart.js" />
+    <Content Include="authcomplete.html" />
+    <Content Include="app\templates\auth\reset.password.html" />
+    <Content Include="app\templates\auth\login.html" />
+    <Content Include="app\templates\dashcomponents\bankstats.table.html" />
+    <Content Include="app\templates\dash\dash.html" />
+    <Content Include="app\templates\structure\bank.vision.app.html" />
+    <Content Include="assets\css\app.css" />
+    <Content Include="assets\css\dash.widget.css" />
+    <Content Include="assets\css\simple-sidebar\simple-sidebar.css" />
+    <Content Include="assets\css\spinner.css" />
+    <Content Include="assets\css\social-buttons.css" />
+    <Content Include="index.html" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="assets\css\style.css" />
+    <Content Include="bower.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="app\templates\dashcomponents\completed.searches.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\exceptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app\AdminTools\delete.component.ts" />
+    <TypeScriptCompile Include="app\AdminTools\validators.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\components\admin.component.ts" />
+    <TypeScriptCompile Include="app\entities\loan.ts" />
+    <TypeScriptCompile Include="app\entities\resetPassword.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>LM.Portal</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>npm install --silent --msvs_version=2012</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets" />
+</Project>

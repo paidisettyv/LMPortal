@@ -1,0 +1,27 @@
+﻿body {
+    background: url('/assets/images/backgrounds/company-bkground.gif');
+    background-size: cover;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+}
+
+.lending-metrics-bean {
+    height: 20px;
+    margin-right: 10px;
+}
+
+#page-content-wrapper {
+    padding: 65px 0 0;
+}
+
+#load-content-wrapper {
+    padding: 15px 0 0;
+}
+
+.bg-primary, .bg-info, bg-success, bg-warning, bg-danger {
+    padding: 15px;
+}
+
+.chart-wrapper {
+    padding: 0 0 10px 0;
+}

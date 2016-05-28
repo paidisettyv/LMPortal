@@ -1,0 +1,7 @@
+﻿ bank-vision-app   .strong   { color: #060; border-color: #0F0; float:right; padding:3px 0 0 17px; font-weight:bold; font-size:16px;}
+ bank-vision-app  .medium   { color: #C60; border-color: #FC0;  float:right;padding:4px 0 0 11px; font-weight:bold; font-size:16px; }
+ bank-vision-app  .weak     { color: #900; border-color: #F00; float:right ;padding:3px 0 0 17px; font-weight:bold; font-size:16px;}
+ 
+ bank-vision-app .error{
+     color:red;
+ }

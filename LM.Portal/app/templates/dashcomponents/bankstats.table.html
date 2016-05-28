@@ -1,0 +1,82 @@
+﻿<div class="col-xs-12 col-sm-12 col-md-12 col-lr-12">
+    <div class="panel panel-default dash-widget">
+        <div class="panel-heading">
+            <h2 class="panel-title">{{title}}</h2>
+        </div>
+
+        <div class="panel-body">
+            <!-- Can't work out how to import the display period enum -->
+            <ul class="time-period-tabs nav nav-tabs">
+                <li role="presentation" [ngClass]="{active: isDisplayedPeriod(0)}"><a (click)="displayDailyStats($event)">Daily</a></li>
+                <li role="presentation" [ngClass]="{active: isDisplayedPeriod(1)}" ><a (click)="displayWeeklyStats($event)">Weekly</a></li>
+                <li role="presentation" [ngClass]="{active: isDisplayedPeriod(2)}"><a (click)="displayMonthlyStats($event)">Monthly</a></li>
+            </ul>
+
+            <div *ngIf="stats && stats.length">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-condensed">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Searches</th>
+                                <th>Abort Ratio (%)</th>
+                                <th>Extract Fail Ratio (%)</th>
+                                <th>Login Fail Ration (%)</th>
+                                <th>Most Recent Fail Date</th>
+                                <th>Most Recent Success Date</th>
+                                <th>Avg. Transaction Range (Days)</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="#bankstat of stats;  #i = index">
+                                <td>{{i + 1 + ( (currentPage - 1) * currentPageSize)}}</td>
+                                <td>{{bankstat.Name}}</td>
+                                <td>{{bankstat.Searches}}</td>
+                                <td>{{bankstat.AbortRatio | percent}}</td>
+                                <td>{{bankstat.ExtractFailRatio | percent}}</td>
+                                <td>{{bankstat.LoginFailRatio | percent}}</td>
+                                <!-- Angular 2 built in date object doesn't accept unicode string -->
+                                <td>{{bankstat.MostRecentFailDate | unicodeToDate | date:'short'}}</td>
+                                <td>{{bankstat.MostRecentSuccessDate | unicodeToDate | date:'short'}}</td>
+                                <td>{{bankstat.AverageTransactionDayRange}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- TODO Build Directive -->
+                <nav>
+                    <ul class="pagination">
+                        <template [ngIf]="!isFirstPage()">
+                            <li>
+                                <a aria-label="Previous" (click)="prevPage($event)">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        </template>
+
+                        <!--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>-->
+                    
+                        <template [ngIf]="!isLastPage()">
+                            <li>
+                                <a aria-label="Next" (click)="nextPage($event)">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </template>
+                    </ul>
+                </nav>
+            </div>
+
+            <div *ngIf="!(stats && stats.length)" class="well">
+                No bank statistics found for this time period
+            </div>
+        </div>
+    </div>
+</div>
